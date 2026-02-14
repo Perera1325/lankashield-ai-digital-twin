@@ -1,5 +1,23 @@
-\# LankaShield – AI-Powered Digital Twin for Critical Infrastructure
+LankaShield – AI-Powered Digital Twin for Critical Infrastructure
 
+## 📊 AI Monitoring Dashboard
+
+![Dashboard](assets/WhatsApp Image 2026-02-14 at 18.47.43.jpeg
+)
+
+---
+
+## 🔐 JWT Authentication (Swagger UI)
+
+![Swagger](assets/WhatsApp Image 2026-02-14 at 18.56.26.jpeg
+)
+
+---
+
+## 🐳 Docker Running Containers
+
+![Docker](assets/WhatsApp Image 2026-02-14 at 19.47.06.jpeg
+)
 
 
 \## Overview
