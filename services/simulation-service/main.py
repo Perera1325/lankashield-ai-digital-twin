@@ -47,9 +47,32 @@ def generate_telecom_tower():
 
 # --- Generate New Data Endpoints ---
 
+import requests
+
+AI_ENGINE_URL = "http://127.0.0.1:8001/analyze"
+
 @app.get("/simulate/grid")
 def simulate_grid():
-    return generate_grid_node()
+    grid_data = generate_grid_node()
+
+    try:
+        response = requests.post(
+            AI_ENGINE_URL,
+            json={
+                "voltage": grid_data["voltage"],
+                "load_percentage": grid_data["load_percentage"],
+                "temperature": grid_data["temperature"]
+            },
+            timeout=5
+        )
+        ai_result = response.json()
+    except Exception as e:
+        ai_result = {"error": str(e)}
+
+    return {
+        "grid_data": grid_data,
+        "ai_analysis": ai_result
+    }
 
 
 @app.get("/simulate/ev")
