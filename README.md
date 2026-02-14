@@ -123,4 +123,17 @@ Month 3 – Energy Optimization + Deployment
 
 
 
+## Backend Progress (Milestone 1)
+
+- Simulation microservice (FastAPI)
+- AI anomaly detection (Isolation Forest)
+- PostgreSQL integration
+- SQLAlchemy ORM models
+- Automatic table creation
+- Anomaly logging endpoint
+- Microservice-to-microservice integration
+
+
+
+
 

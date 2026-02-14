@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres:15
+    container_name: lankashield-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Vikum1234#
+      POSTGRES_DB: lankashield
+    ports:
+      - "5432:5432"
+
+  ai-engine:
+    build: ./services/ai-engine
+    container_name: lankashield-ai
+    depends_on:
+      - db
+    ports:
+      - "8001:8001"
+
+  simulation:
+    build: ./services/simulation-service
+    container_name: lankashield-simulation
+    depends_on:
+      - ai-engine
+    ports:
+      - "8000:8000"

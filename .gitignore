@@ -3,9 +3,11 @@ venv/
 __pycache__/
 *.pyc
 
-# Environment
+# Env
 .env
 
-# OS
-.DS_Store
-Thumbs.db
+# Node
+node_modules/
+
+# Docker
+*.log

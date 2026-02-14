@@ -49,7 +49,8 @@ def generate_telecom_tower():
 
 import requests
 
-AI_ENGINE_URL = "http://127.0.0.1:8001/analyze"
+AI_ENGINE_URL = "http://ai-engine:8001/analyze"
+
 
 @app.get("/simulate/grid")
 def simulate_grid():
